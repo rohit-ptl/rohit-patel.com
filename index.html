@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Patel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-primary: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: clamp(1rem, 5vw, 4rem);
+            color: #333;
+            background-color: white;
+            font-size: clamp(1rem, 1rem + 0.2vw, 1.125rem);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: minmax(240px, 280px) 1fr;
+            gap: clamp(2rem, 4vw, 3rem);
+            align-items: start;
+            margin-bottom: clamp(1rem, 3vw, 3rem);
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin: clamp(1rem, 2vw, 2.5rem) 0;
+        }
+        
+        h1 {
+            color: #1e1e1e;
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            color: #1e1e1e;
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            margin: 0 0 1rem 0;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        
+        li {
+            margin-bottom: 0rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        li::before {
+            content: "—";
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+        }
+        
+        .publication {
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-img {
+                width: min(280px, 70%);
+                margin: 0 auto;
+            }
+
+            .header-content {
+                align-items: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            li {
+                padding-left: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+
+            .profile-img {
+                width: min(240px, 80%);
+            }
+
+            li {
+                margin-bottom: 1.25rem;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 1rem;
+            }
+
+            .social-links a {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+
+        /* Add this media query to make the image slightly larger on mobile */
+        @media (max-width: 640px) {
+            .profile-img {
+                width: min(300px, 80%);
+            }
+        }
+
+        /* Add this media query to make the image slightly smaller on web */
+        @media (min-width: 641px) {
+            .profile-img {
+                width: min(250px, 70%);
+            }
+        }
+
+    .subtle-link {
+        text-decoration: underline;
+        color: inherit;
+    }
+
+    .subtle-link:hover {
+        color: inherit;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="headshot.jpg" alt="Profile Photo" class="profile-img">
+        <div class="header-content">
+            <h1>Rohit Patel</h1>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rohitpat/">LinkedIn</a>
+                <a href="https://github.com/rohit-ptl">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <ul>
+		<li>Director on Meta's GenAI research team, working towards building <a href="https://ai.meta.com/blog/meta-llama-3-1/" class="subtle-link">Llama</a> large language models and open sourcing them</li>
+		<li>Hands-on, technical strategist with experience building strong technical teams, and  developing successful leaders</li>
+		<li>Executed numerous successful projects working with C-suite executives leading to tangible business outcomes</li>
+		<li>Recently wrote <a href="https://towardsdatascience.com/understanding-llms-from-scratch-using-middle-school-math-e602d27ec876" class="subtle-link">Understanding LLMs from Scratch</a>, one of Medium's <a href="https://blog.medium.com/it-happened-on-medium-in-2024-6575a0e85406" class="subtle-link">most shared stories</a> of 2024</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Research and Publications</h2>
+    
+	<div class="publication">
+	<p> <a href="https://arxiv.org/pdf/2407.21783" >The Llama 3 Herd of Models</a>, with <i>Meta GenAI taem</i><br>
+This paper presents a new set of foundation models, called Llama 3. It is a herd of language models that natively support multilinguality, coding, reasoning, and tool usage. Our largest model is a dense Transformer with 405B parameters and a context window of up to 128K tokens. This paper presents an extensive empirical evaluation of Llama 3. We find that Llama 3 delivers comparable quality to leading language models such as GPT-4 on a plethora of tasks. We publicly release Llama 3, including pre-trained and post-trained versions of the 405B parameter language model and our Llama Guard 3 model for input and output safety. The paper also presents the results of experiments in which we integrate image, video, and speech capabilities into Llama 3 via a compositional approach. We observe this approach performs competitively with the state-of-the-art on image, video, and speech recognition tasks. The resulting models are not yet being broadly released as they are still under development. </p>
+    </div>
+
+    <div class="publication">
+    <p> <a href="https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/">Meta Llama 3.2</a>, with <i> Meta GenAI taem</i> <br>
+	Meta AI's Llama 3.2 release introduces small and medium-sized vision LLMs and lightweight text models optimized for edge and mobile devices. These models support context lengths of 128K tokens and excel in on-device tasks like summarization and instruction following. Llama Stack distributions simplify deployment across environments with integrated safety features. This update enhances Llama's capabilities, modifiability and cost efficiency, driving innovation in generative AI applications. </p>
+    </div>
+
+    <div class="publication">
+    <p> <a href="https://github.com/meta-llama/llama3/tree/main" >Meta Llama 3 large language model</a>, with <i>Meta GenAI taem</i><br>
+Meta developed and released the Meta Llama 3 family of large language models (LLMs), a collection of pretrained and instruction tuned generative text models in 8 and 70B sizes. The Llama 3 instruction tuned models are optimized for dialogue use cases and outperform many of the available open source chat models on common industry benchmarks. Further, in developing these models, we took great care to optimize helpfulness and safety.</p>
+    </div>
+
+    <div class="publication">
+    <p> <a href="https://economics.princeton.edu/working-papers/costly-verification-and-money-burning">Costly Inspection and Money Burning</a>, with <i>Can Urgun</i><br>
+A principal designs a mechanism to allocate an indivisible, productivity-increasing good to one of many agents. Monetary transfers are not allowed. Instead, we consider the interplay between two instruments studied only in isolation: “costly verification of the agent’s type” and “money burning”. We use a graph-theoretic approach and characterize the optimal mechanism completely.</p>
+    </div>
+
+    <div class="publication">
+    <p> <a href="https://drive.google.com/uc?export=download&id=18pG4pqKeLfn8Hn5yXIhKTWs31zL3GLfo" >Costly Verification by an Intermediary in a Two Sided Market</a><br>
+This paper studies the players in a two sided market when the good sold is of uncertain value, network effects are in play, and there is a cost to verifying the value of the good. It describes the optimal mechanism to maximize the revenue for the intermediary.</p>
+    </div>
+
+    <div class="publication">
+    <p> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3149231" >Indices for Dynamic Pricing in the Event Ticketing Industry</a><br>
+This paper introduces new price indices and measures to facilitate dynamic pricing in the sports ticketing industry.</p>
+    </div>
+
+    <div class="publication">
+    <p> <a href="https://drive.google.com/uc?export=download&id=1s9-dT_cZfQ3LTokLCdef9FjJWTIwIE0e" >A Seller's Problem and Costly Verification</a>, with <i>Can Urgun </i><br>
+This paper outlines the optimal strategy to maximize the revenue of a seller when the buyer's willingness to pay is unknown, but can be discovered at a cost (market research etc..). </p>
+    </div>
+
+    <div class="publication">
+    <p> <a href="https://drive.google.com/uc?export=download&id=1xlX4ClAmzGqiroieozSGczkVnZqXZ0cJ" >Differentiating Reputations in Dynamic Duopolies</a>, with <i>R. Andrew Butters</i> <br>
+This paper outlines how reputation in a marketplace can be used to boost prices and revenue in dynamic duopolies, and how firms end up at different product quality and prices in a dynamic equilibrium.</p>
+    </div>
+    </div>
+</body>
+</html>
